@@ -1,0 +1,57 @@
+---
+---
+
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="{{ site.locale | slice: 0,2 | default: " en" }}">
+
+<head>
+  {% include head.html %}
+</head>
+
+<body class="landing-page">
+  {% include nav.html %}
+  <div class="wrapper">
+    <div class="page-header page-header-small header-filter mb-4">
+      <div class="page-header-image card-background"
+        style="background-image: url({{page.header.image}});"
+        data-cms-original-style="background-image: url({{page.header.image}});">
+
+      </div>
+      <div class="container contentWrapper" style="padding-top: 107.2px;">
+        <div class="row">
+          <div class="col-lg-10 mx-auto text-center pt-4">
+            
+            <h2 class="display-2 text-white">{{page.header.title}}</h2>
+            
+            <h2 class="lead text-white pl-5 pr-5 pb-3 text-center">
+              {{page.header.text}}
+            </h2>
+            
+    
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="main" class="container" data-cms-content-wrapper="/_layouts/default.html">
+      <hr>
+
+      <!-- TODO html in markdown not rendered -->
+      {{ content }}
+
+
+    </div>
+  </div>
+  {% include footer.html %}
+  {% include scripts.html %}
+
+
+
+</body>
+
+</html>
