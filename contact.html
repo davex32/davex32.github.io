@@ -1,105 +1,108 @@
 ---
-title: Home
+title: Contact
 layout: default
 header:
   small: true
   image: "../assets/img/theme/davexmbgs.jpeg"
-  channel: "davexmachinatv"
 ---
-<div class="col-md-12 text-center mb-5">
-  <h1 class="display-1">Want to reach out?</h1>
-  <h3 class="lead"></h3>
-</div>
 
-<div class="row">
-  <div class="col-lg-12 col-md-6 col-6">
-    <div class="info info-hover">
-      <h4 class="info-title">Email</h4>
-      <p class="description px-0">davexmachina@pm.me</p>
+<style>
+  /* Hide the small header image background to let the dark theme shine */
+  .page-header-small { min-height: 0 !important; height: auto !important; }
+  .page-header-image { display: none !important; }
+  
+  /* Hover effect for the social cards */
+  .social-card { transition: transform 0.2s, box-shadow 0.2s; background-color: #172b4d; }
+  .social-card:hover { transform: translateY(-5px); box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important; }
+  .social-card a { text-decoration: none; }
+</style>
+
+<div class="container py-5">
+  
+  <!-- Intro Header -->
+  <div class="row justify-content-center mb-5">
+    <div class="col-lg-8 text-center">
+      <h1 class="display-2 text-white">Let's Connect</h1>
+      <h3 class="lead text-white-50">
+        The fastest way to reach me is on Discord or Twitch chat. <br>
+        For business, sponsorships, or collaborations, shoot me an email below.
+      </h3>
     </div>
   </div>
-</div>
 
-<section class="mt-4" id="contact">
-  <div class="row mt-5 mb-4 pt-5">
-    <div class="col-md-8 ml-auto mr-auto text-center mt-5">
-      <span class="badge badge-info">Leave a message</span>
-      <h1 class="title">Tell us more about <b>yourself</b></h1>
-      <h4 class="desc">Have questions? Contact me. I'd like to talk more about how I can help</h4>
-    </div>
-  </div>
-
-  <div class="contactus-1 fullWidth">
-    <div class="container">
-      <div class="row">
-        
-        <div class="col-lg-8 col-md-12 ml-auto mr-auto">
-          <div class="card card-contact card-raised">
-
-            <form method="post" action="https://formspree.io/f/xyzngedq" id="contact-form">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>Your Name</label>
-                      <div class="input-group mb-4">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
-                        </div>
-                        <input class="form-control" name="Name" placeholder="Your Name..." aria-label="Your Name..." type="text">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 pl-2">
-                    
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label>Organisation</label>
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="ni ni-briefcase-24"></i></span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Optional..." name="org">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label>Email address</label>
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Email Here..." name="email">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label>Your message</label>
-                  <textarea name="message" class="form-control" id="message" rows="6"></textarea>
-                </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="custom-control custom-checkbox mt-2">
-                      <input type="hidden" name="_next" value="/thanks">
-                      <input type="hidden" name="_subject" value="Contact form submission">
-                      <input type="text" name="_gotcha" style="display: none;" class="contact-form__gotcha" val="">
-
-                      <input class="custom-control-input" id="customCheck" type="checkbox" required="">
-                      <label class="custom-control-label" for="customCheck">
-                        <span>I'm not a robot</span>
-                      </label>
-
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <button type="submit" class="btn btn-primary pull-right">Send Message</button>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
+  <!-- Socials Grid -->
+  <div class="row justify-content-center mb-5">
+    
+    <!-- Discord -->
+    <div class="col-lg-3 col-md-6 mb-4">
+      <a href="/discord" target="_blank" class="card social-card border-0 h-100 text-white shadow">
+        <div class="card-body text-center p-5">
+          <i class="fab fa-discord display-2 text-info mb-3"></i>
+          <h4 class="text-white mb-0">Discord</h4>
+          <p class="text-white-50 mb-0">Chat & Community</p>
         </div>
-        
+      </a>
+    </div>
+
+    <!-- Twitch -->
+    <div class="col-lg-3 col-md-6 mb-4">
+      <a href="https://www.twitch.tv/davexmachina_" target="_blank" class="card social-card border-0 h-100 text-white shadow">
+        <div class="card-body text-center p-5">
+          <i class="fab fa-twitch display-2" style="color: #9146FF;"></i>
+          <h4 class="text-white mb-0 mt-2">Twitch</h4>
+          <p class="text-white-50 mb-0">Live Streams</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- YouTube -->
+    <div class="col-lg-3 col-md-6 mb-4">
+      <a href="https://www.youtube.com/@davexmachina" target="_blank" class="card social-card border-0 h-100 text-white shadow">
+        <div class="card-body text-center p-5">
+          <i class="fab fa-youtube display-2 text-danger mb-3"></i>
+          <h4 class="text-white mb-0">YouTube</h4>
+          <p class="text-white-50 mb-0">Main Channel</p>
+        </div>
+      </a>
+    </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+      <a href="https://www.youtube.com/@davexlive" target="_blank" class="card social-card border-0 h-100 text-white shadow">
+        <div class="card-body text-center p-5">
+          <i class="fab fa-youtube display-2 text-danger mb-3"></i>
+          <h4 class="text-white mb-0">YouTube</h4>
+          <p class="text-white-50 mb-0">Live Streams / VODs</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- Twitter / X (Optional, remove if you don't use it) -->
+    <div class="col-lg-3 col-md-6 mb-4">
+      <a href="https://x.com/davexmachina" target="_blank" class="card social-card border-0 h-100 text-white shadow">
+        <div class="card-body text-center p-5">
+          <i class="fab fa-twitter display-2 text-info mb-3"></i>
+          <h4 class="text-white mb-0">Twitter / X</h4>
+          <p class="text-white-50 mb-0">Updates & Clips</p>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Business Inquiries Highlight -->
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <div class="card bg-gradient-success border-0 shadow-lg">
+        <div class="card-body text-white text-center p-5">
+          <i class="ni ni-email-83 display-3 mb-3"></i>
+          <h3 class="text-white">Business Inquiries</h3>
+          <p class="mb-4">Got a sponsorship, collaboration, or project in mind? Send me a direct email.</p>
+          <a href="mailto:davexmachina@pm.me" class="btn btn-white text-success font-weight-bold btn-lg">
+            <i class="ni ni-send mr-2"></i> davexmachina@pm.me
+          </a>
+        </div>
+      </div>
     </div>
   </div>
-  </div>
-</section>
+
+</div>
