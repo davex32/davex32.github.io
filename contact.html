@@ -3,108 +3,89 @@ title: Contact
 layout: default
 header:
   small: true
-  image: "../assets/img/theme/davexmbgs.jpeg"
+  text: "Get in touch — business, collabs, or just to say hi."
 ---
 
 <style>
-  /* Hide the small header image background to let the dark theme shine */
   .page-header-small { min-height: 0 !important; height: auto !important; }
   .page-header-image { display: none !important; }
-  
-  /* Hover effect for the social cards */
-  .social-card { transition: transform 0.2s, box-shadow 0.2s; background-color: #172b4d; }
-  .social-card:hover { transform: translateY(-5px); box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important; }
-  .social-card a { text-decoration: none; }
+
+  /* Centered wrapping social tiles — any number of items looks clean */
+  .social-tile {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    padding: 1.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: .5rem;
+    background-color: #172b4d;
+    border: 1px solid rgba(255,255,255,.1);
+    color: #fff;
+    text-decoration: none;
+    transition: transform .2s, box-shadow .2s, border-color .2s;
+  }
+  .social-tile:hover {
+    transform: translateY(-5px);
+    border-color: rgba(45,206,137,.5);
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.4);
+    color: #fff;
+    text-decoration: none;
+  }
+  .social-tile i { font-size: 2rem; margin-bottom: .75rem; }
+  .social-tile span { font-size: .9rem; }
 </style>
 
 <div class="container py-5">
-  
-  <!-- Intro Header -->
-  <div class="row justify-content-center mb-5">
-    <div class="col-lg-8 text-center">
-      <h1 class="display-2 text-white">Let's Connect</h1>
-      <h3 class="lead text-white-50">
-        The fastest way to reach me is on Discord or Twitch chat. <br>
-        For business, sponsorships, or collaborations, shoot me an email below.
-      </h3>
-    </div>
-  </div>
 
-  <!-- Business Inquiries (toned down) -->
-<div class="row justify-content-center">
-  <div class="col-lg-6">
-    <div class="card social-card border-0 shadow text-white h-100">
-      <div class="card-body text-center p-5">
-        <i class="ni ni-email-83 display-3 text-success mb-3"></i>
-        <h3 class="text-white mb-2">Business Inquiries</h3>
-        <p class="text-white-50 mb-4">Got a sponsorship, collaboration, or project in mind? Send me a direct email.</p>
-        <a href="mailto:davexmachina@pm.me" class="btn btn-success">
-          <i class="ni ni-send mr-2"></i>davexmachina@pm.me
-        </a>
+  <!-- 1) Business Inquiries FIRST -->
+  <div class="row justify-content-center mb-5">
+    <div class="col-lg-6 col-md-8">
+      <div class="card border-0 shadow text-white text-center"
+           style="background-color:#172b4d; border:1px solid rgba(45,206,137,.35) !important; box-shadow:0 0 25px rgba(45,206,137,.12) !important;">
+        <div class="card-body p-5">
+          <i class="ni ni-email-83 display-3 text-success mb-3"></i>
+          <h3 class="text-white mb-2">Business Inquiries</h3>
+          <p class="text-white-50 mb-4">Sponsorships, collaborations, projects — straight to my inbox.</p>
+          <a href="mailto:davexmachina@pm.me" class="btn btn-success btn-lg">
+            <i class="ni ni-send mr-2"></i>davexmachina@pm.me
+          </a>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-  <!-- Socials Grid -->
-  <div class="row justify-content-center mb-5">
-    
-    <!-- Discord -->
-    <div class="col-lg-3 col-md-6 mb-4">
-      <a href="/discord" target="_blank" class="card social-card border-0 h-100 text-white shadow">
-        <div class="card-body text-center p-5">
-          <i class="fab fa-discord display-2 text-info mb-3"></i>
-          <h4 class="text-white mb-0">Discord</h4>
-          <p class="text-white-50 mb-0">Chat & Community</p>
-        </div>
+  <!-- 2) Socials below, centered + wrapping -->
+  <div class="row justify-content-center">
+    <div class="col-lg-10 text-center">
+      <h4 class="text-white mb-4">…or find me on</h4>
+
+      <a href="/discord" target="_blank" class="social-tile">
+        <i class="fab fa-discord" style="color:#5865F2;"></i>
+        <span>Discord</span>
       </a>
-    </div>
-
-    <!-- Twitch -->
-    <div class="col-lg-3 col-md-6 mb-4">
-      <a href="https://www.twitch.tv/davexmachina_" target="_blank" class="card social-card border-0 h-100 text-white shadow">
-        <div class="card-body text-center p-5">
-          <i class="fab fa-twitch display-2" style="color: #9146FF;"></i>
-          <h4 class="text-white mb-0 mt-2">Twitch</h4>
-          <p class="text-white-50 mb-0">Live Streams</p>
-        </div>
+      <a href="https://www.twitch.tv/davexmachina_" target="_blank" class="social-tile">
+        <i class="fab fa-twitch" style="color:#9146FF;"></i>
+        <span>Twitch</span>
       </a>
-    </div>
-
-    <!-- YouTube -->
-    <div class="col-lg-3 col-md-6 mb-4">
-      <a href="https://www.youtube.com/@davexmachina" target="_blank" class="card social-card border-0 h-100 text-white shadow">
-        <div class="card-body text-center p-5">
-          <i class="fab fa-youtube display-2 text-danger mb-3"></i>
-          <h4 class="text-white mb-0">YouTube</h4>
-          <p class="text-white-50 mb-0">Main Channel</p>
-        </div>
+      <a href="https://www.youtube.com/@davexmachina" target="_blank" class="social-tile">
+        <i class="fab fa-youtube" style="color:#FF0000;"></i>
+        <span>Main Channel</span>
       </a>
-    </div>
-
-        <div class="col-lg-3 col-md-6 mb-4">
-      <a href="https://www.youtube.com/@davexlive" target="_blank" class="card social-card border-0 h-100 text-white shadow">
-        <div class="card-body text-center p-5">
-          <i class="fab fa-youtube display-2 text-danger mb-3"></i>
-          <h4 class="text-white mb-0">YouTube</h4>
-          <p class="text-white-50 mb-0">Live Streams / VODs</p>
-        </div>
+        <a href="https://www.youtube.com/@@davexlive" target="_blank" class="social-tile">
+        <i class="fab fa-youtube" style="color:#FF0000;"></i>
+        <span>Live Streams / VODs </span>
       </a>
-    </div>
-
-    <!-- Twitter / X (Optional, remove if you don't use it) -->
-    <div class="col-lg-3 col-md-6 mb-4">
-      <a href="https://x.com/davexmachina" target="_blank" class="card social-card border-0 h-100 text-white shadow">
-        <div class="card-body text-center p-5">
-          <i class="fab fa-twitter display-2 text-info mb-3"></i>
-          <h4 class="text-white mb-0">Twitter / X</h4>
-          <p class="text-white-50 mb-0">Updates & Clips</p>
-        </div>
+      <a href="https://x.com/davexmachina" target="_blank" class="social-tile">
+        <i class="fab fa-twitter" style="color:#1DA1F2;"></i>
+        <span>X / Twitter</span>
       </a>
-    </div>
+      <a href="https://ko-fi.com/davexmachina" target="_blank" class="social-tile">
+        <i class="fas fa-mug-hot" style="color:#FF5E5B;"></i>
+        <span>Ko-fi</span>
+      </a>
 
+    </div>
   </div>
-
-
-
 </div>
