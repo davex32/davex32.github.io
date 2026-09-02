@@ -1,0 +1,21 @@
+# davexmachina — Davide Nunes
+
+> Davide Nunes (online: davexmachina) is a variety content creator, AI research
+> scientist, and jazz saxophonist. Portuguese, based in London. This site hosts
+> his stream info, curated modlists for modded games (including a popular
+> S.T.A.L.K.E.R. GAMMA loadout, Project Zomboid, Escape from Tarkov), and his community.
+
+## Key pages
+- [About](https://davexmachina.com/about): Biography — AI scientist (NLP, representation learning, social simulation, mRNA optimization, industrial optimization, process discovery), jazz saxophonist, variety streamer.
+- [Modlists](https://davexmachina.com/modlists): Curated modded-game setups with install notes and load orders.
+- [GAMMA Modlist](https://davexmachina.com/gamma-mods): Custom S.T.A.L.K.E.R. GAMMA additions with download links and MO2 load order.
+- [Discord](https://davexmachina.com/discord): Community server (ExMachina).
+- [Contact](https://davexmachina.com/contact): Business inquiries and social links.
+
+## Profiles
+- Twitch: https://www.twitch.tv/davexmachina_
+- YouTube: https://www.youtube.com/@davexmachina
+- X: https://x.com/davexmachina
+- Research site: https://davidenunes.com
+- GitHub: https://github.com/davidenunes
+- Google Scholar: https://scholar.google.com/citations?user=ppBShNwAAAAJ
