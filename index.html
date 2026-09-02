@@ -6,27 +6,82 @@ header:
   channel: "davexmachina_"
   video: KNErhEE4pT4 
 ---
+<div class="section features-3 my-5 fullWidth" style="background-image: url(../assets/img/theme/davexmpatterns.svg)">
+  <div class="container">
 
-<div class="section features-3 my-5 fullWidth" style="background-image: url(../assets/img/theme/davexmpatterns.svg)" data-cms-original-style="background-image: url(' /assets/img/ill/p31.svg')">
-
-
-      <div class="container">
-        <div class="row text-center justify-content-center">
-          <div class="col-lg-8">
-            <h3 class="display-3 text-white">Welcome to davexmachina<span class="text-success"> Join the community of fellow gamers</span></h3>
-            <p class="lead text-white">
-                Get access to exclusive davexmachina content and join a community of gamers that enjoy videogames for what they are!  
-            </p>
-          </div>
+    <!-- Hero: logo + tagline + platform buttons -->
+    <div class="row text-center justify-content-center">
+      <div class="col-lg-8">
+        <img src="../assets/img/brand/davexmachina.png" alt="davexmachina"
+             style="height: 64px; image-rendering: pixelated;
+                    filter: drop-shadow(0 0 6px rgba(45,206,137,.55)) drop-shadow(0 0 20px rgba(45,206,137,.25));">
+        <p class="lead text-white mt-3">
+          Variety streams, modded S.T.A.L.K.E.R. runs and chill gameplay —
+          catch the live shows, dig through the modlists, join the community.
+        </p>
+        <div class="mt-4">
+          <!-- TODO: replace YOUR_CHANNEL with your Twitch name -->
+          <a href="https://www.twitch.tv/YOUR_CHANNEL" target="_blank" class="btn btn-primary mx-1 mb-2"><i class="ni ni-tv-2 mr-2"></i>Watch Live</a>
+          <a href="https://www.youtube.com/@davexmachina" target="_blank" class="btn btn-danger mx-1 mb-2"><i class="ni ni-button-play mr-2"></i>YouTube</a>
+          <a href="/discord" class="btn btn-info mx-1 mb-2"><i class="ni ni-chat-round mr-2"></i>Discord</a>
+          <a href="/gamma-mods" class="btn btn-success mx-1 mb-2"><i class="ni ni-align-center mr-2"></i>GAMMA Modlist</a>
         </div>
-        
+      </div>
+    </div>
 
-   <div class="text-center mt-4">
-  <a href="/discord" class="btn btn-info btn-lg"><i class="ni ni-chat-round mr-2"></i>Join the Discord</a>
+    <!-- Random latest uploads (fed by assets/data/videos.json) -->
+    <div class="row mt-5">
+      <div class="col-12 text-center mb-4">
+        <h3 class="display-4 text-white">Latest Uploads</h3>
+        <p class="lead text-white-50">Random picks from the channel — reload for a reroll.</p>
+      </div>
+    </div>
+    <div class="row" id="latestVideos"></div>
+
+    <style>
+      .video-card {
+        background-color: #172b4d;
+        border: 1px solid rgba(255,255,255,.1) !important;
+        transition: transform .2s, border-color .2s;
+        text-decoration: none !important;
+      }
+      .video-card:hover { transform: translateY(-5px); border-color: rgba(255,0,0,.5) !important; }
+      .play-overlay {
+        position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(0,0,0,.4);
+        display: flex; align-items: center; justify-content: center;
+        color: #fff; transition: background .2s, color .2s;
+      }
+      .video-card:hover .play-overlay { background: rgba(0,0,0,.2); color: #ff0000; }
+    </style>
+
+    <script>
+    (function () {
+      var COUNT = 3;
+      fetch("{{ '/assets/data/videos.json' | relative_url }}")
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+        .then(function (vids) { render(pick(shuffle(vids || []), COUNT)); })
+        .catch(function () {}); // JSON missing → section just stays empty
+
+      function shuffle(a) { for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+      function pick(a, n) { return a.slice(0, n); }
+
+      function render(vids) {
+        document.getElementById("latestVideos").innerHTML = vids.map(function (v) {
+          var d = document.createElement("div"); d.textContent = v.title; var safe = d.innerHTML;
+          return '<div class="col-lg-4 col-md-6 mb-4">' +
+            '<a href="https://www.youtube.com/watch?v=' + v.id + '" target="_blank" rel="noopener" class="card video-card border-0 shadow h-100">' +
+            '<div style="height:180px;background:url(\'' + v.thumb + '\') center/cover no-repeat;position:relative;">' +
+            '<div class="play-overlay"><i class="fab fa-youtube display-3"></i></div></div>' +
+            '<div class="card-body"><h5 class="card-title text-white">' + safe + '</h5>' +
+            '<p class="small text-white-50 mb-0">Watch on YouTube ↗</p></div>' +
+            '</a></div>';
+        }).join("");
+      }
+    })();
+    </script>
+
   </div>
 </div>
-
-
-
 
 
