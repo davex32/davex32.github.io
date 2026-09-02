@@ -16,3 +16,68 @@
 <link type="text/css" href="/assets/css/jekyll.css" rel="stylesheet">
 <link type="text/css" href="/assets/css/discord.css" rel="stylesheet">
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://davexmachina.com/#person",
+      "name": "Davide Nunes",
+      "alternateName": ["davexmachina", "David Nunes"],
+      "url": "https://davidenunes.com",
+      "jobTitle": "AI Research Scientist",
+      "description": "AI research scientist (natural language processing, representation learning, social simulation), jazz saxophonist, and variety content creator. Portuguese, based in London.",
+      "nationality": { "@type": "Country", "name": "Portugal" },
+      "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" },
+      "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Natural Language Processing", "Social Simulation", "Jazz", "Saxophone", "Video Games", "Game Modding", "Content Creation", "Software Engineering", "Open Source", "Science"],
+      "sameAs": [
+        "https://www.twitch.tv/davexmachina_",
+        "https://www.youtube.com/@davexmachina",
+        "https://www.youtube.com/@davexlive",
+        "https://x.com/davexmachina",
+        "https://github.com/davidenunes",
+        "https://scholar.google.com/citations?user=ppBShNwAAAAJ",
+        "https://ko-fi.com/davexmachina"
+        "https://nexus.gg/davexmachina"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://davexmachina.com/#website",
+      "url": "https://davexmachina.com/",
+      "name": "davexmachina",
+      "description": "Official site of davexmachina — streams, videos, modlists and community.",
+      "publisher": { "@id": "https://davexmachina.com/#person" },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+
+
+
+<!-- ===== SEO / Social metadata ===== -->
+{% assign seo_title = page.title | default: "davexmachina" %}
+{% assign seo_desc = page.description | default: "Variety streams, modded game setups and a chill community. Davide Nunes — AI scientist, jazz saxophonist and variety content creator, based in London." %}
+
+<title>{{ seo_title }}{% unless page.title contains "davexmachina" %} | davexmachina{% endunless %}</title>
+<meta name="description" content="{{ seo_desc }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+<!-- Open Graph (Discord/Twitter/Facebook previews) -->
+<meta property="og:site_name" content="davexmachina">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ seo_title }}">
+<meta property="og:description" content="{{ seo_desc }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ '/assets/img/brand/og-banner.png' | absolute_url }}">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@davexmachina">
+<meta name="twitter:creator" content="@davexmachina">
+<meta name="twitter:title" content="{{ seo_title }}">
+<meta name="twitter:description" content="{{ seo_desc }}">
+<meta name="twitter:image" content="{{ '/assets/img/brand/og-banner.png' | absolute_url }}">
+
