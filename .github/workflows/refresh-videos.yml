@@ -1,0 +1,40 @@
+name: refresh-videos
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # every 6 hours
+  workflow_dispatch:         # manual "Run workflow" button
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch RSS and write JSON
+        run: |
+          mkdir -p assets/data
+          curl -s "https://www.youtube.com/feeds/videos.xml?channel_id=UCuuSwd88yK3b3hiMYUJhTfw" -o /tmp/feed.xml
+          python3 - <<'EOF'
+          import xml.etree.ElementTree as ET, json
+          ns = {"yt":"http://www.youtube.com/xml/schemas/2015","atom":"http://www.w3.org/2005/Atom"}
+          root = ET.parse("/tmp/feed.xml").getroot()
+          vids = []
+          for e in root.findall("atom:entry", ns):
+              vid = e.find("yt:videoId", ns).text
+              vids.append({
+                "id": vid,
+                "title": e.find("atom:title", ns).text,
+                "thumb": "https://i.ytimg.com/vi/%s/mqdefault.jpg" % vid
+              })
+          json.dump(vids, open("assets/data/videos.json","w"), indent=2)
+          EOF
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/data/videos.json
+          git diff --cached --quiet || (git commit -m "chore: refresh videos" && git push)
