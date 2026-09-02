@@ -21,7 +21,7 @@ header:
         </p>
         <div class="mt-4">
           <!-- TODO: replace YOUR_CHANNEL with your Twitch name -->
-          <a href="https://www.twitch.tv/YOUR_CHANNEL" target="_blank" class="btn btn-primary mx-1 mb-2"><i class="ni ni-tv-2 mr-2"></i>Watch Live</a>
+          <a href="https://www.twitch.tv/davexmachina_" target="_blank" class="btn btn-primary mx-1 mb-2"><i class="ni ni-tv-2 mr-2"></i>Watch Live</a>
           <a href="https://www.youtube.com/@davexmachina" target="_blank" class="btn btn-danger mx-1 mb-2"><i class="ni ni-button-play mr-2"></i>YouTube</a>
           <a href="/discord" class="btn btn-info mx-1 mb-2"><i class="ni ni-chat-round mr-2"></i>Discord</a>
           <a href="/gamma" class="btn btn-success mx-1 mb-2"><i class="ni ni-align-center mr-2"></i>GAMMA Modlist</a>
@@ -32,8 +32,7 @@ header:
     <!-- Random latest uploads (fed by assets/data/videos.json) -->
     <div class="row mt-5">
       <div class="col-12 text-center mb-4">
-        <h3 class="display-4 text-white">Latest Uploads</h3>
-        <p class="lead text-white-50">Random picks from the channel — reload for a reroll.</p>
+        <h3 class="display-4 text-white">Recent Content</h3>
       </div>
     </div>
     <div class="row" id="latestVideos"></div>
@@ -74,7 +73,7 @@ header:
             '<div style="height:180px;background:url(\'' + v.thumb + '\') center/cover no-repeat;position:relative;">' +
             '<div class="play-overlay"><i class="fab fa-youtube display-3"></i></div></div>' +
             '<div class="card-body"><h5 class="card-title text-white">' + safe + '</h5>' +
-            '<p class="small text-white-50 mb-0">Watch on YouTube ↗</p></div>' +
+            '</div>' +
             '</a></div>';
         }).join("");
       }
