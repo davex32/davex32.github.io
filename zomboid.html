@@ -41,7 +41,10 @@ header:
     color: #adb5bd; padding: .75rem 1rem; font-size: .8rem;
     white-space: nowrap; overflow-x: auto; display: block; margin: .5rem 0;
   }
-  .copy-btn { float: right; }
+  .copyrow { display: flex; align-items: stretch; gap: .5rem; margin: .5rem 0; }
+  .copyrow .copyline { flex: 1 1 auto; margin: 0; text-align: left; }
+  .copyrow .btn { flex: 0 0 auto; }
+  
 </style>
 
 <div class="section features-3 my-5 fullWidth" style="background-image: url('../assets/img/theme/davexmpatterns.svg')">
@@ -65,8 +68,10 @@ header:
       <div class="zcard">
         <h4><i class="ni ni-map-big mr-2"></i>World / Map</h4>
         <p class="text-white mb-2">Custom map folder <code>map_distanciado</code> plus vanilla <code>Muldraugh, KY</code>.</p>
-        <button class="btn btn-sm btn-success copy-btn" onclick="copyText('mapline', this)">Copy</button>
-        <code class="copyline" id="mapline">Map=map_distanciado;Muldraugh, KY</code>
+        <div class="copyrow">
+            <button class="btn btn-sm btn-success copy-btn" onclick="copyText('mapline', this)">Copy</button>
+            <code class="copyline" id="mapline">Map=map_distanciado;Muldraugh, KY</code>
+        </div>    
       </div>
 
       <!-- Load order table -->
@@ -152,15 +157,18 @@ header:
       <!-- Copy-paste config lines -->
       <div class="zcard">
         <h4><i class="ni ni-single-copy-04 mr-2"></i>Config lines (copy-paste)</h4>
-
+  <div class="copyrow">
         <button class="btn btn-sm btn-success copy-btn" onclick="copyText('modsline', this)">Copy</button>
         <code class="copyline" id="modsline">Mods=\kitsunelib;\tsarslib;\ExtraMapSymbols;\ExtraMapSymbolsUI;\damnlib;\MapSymbolSizeSlider;\MapLegendUI;\PROJECTRVInterior42;\Waterpipes;\ProximityInventory;\EQUIPMENT_UI;\TheOnlyCure;\StandardizedVehicleUpgrades3Core;\StandardizedVehicleUpgrades3V;\VASinked;\VanillaVehiclesAnimated;\VanillaVehiclesAnimated_SVU;\MarzVanillaGuns;\NeatUI_Framework;\CleanUI;\Project_Cook;\Neat_Crafting;\Neat_Building_UIOnly;\errorMagnifier;\ChuckleberryFinnAlertSystem;\SkillRecoveryJournal;\ShelterHold_Beehive;\STA_PryOpen;\BCGToolsTEST;\stanks_suicide;\ComputerModkum;\KI5trailers;\TacHold Complete;\RainCleansBlood;\KI5campers;\CleanHotBar;\RealisticDash;\LGExtendedPlumbing;\87fordB700;\85chevyStepVan;\85chevyStepVanexpanded;\63beetle;\82porsche911;\89trooper;\63Type2Van;\88toyotaHilux;\87toyotaCorolla;\70chevelle;\69fordMustang;\73nissanGTR;\TrueActionsDancing;\SubirEscaleras;\VVA_cullseats;\VSUIKI5;\NewMusic;\TraderVendingMachines;\PlayerDogTags42;\NewMusic_QuincyJones;\NewMusic_JimiHendrix;\NewMusic_CMM;\NewMusic_BobMarley;\NewMusic_HimikoKikuchi;\NewMusic_BelaFleck1;\NewMusic_LifeAfterDeath</code>
-
+   </div>
+    <div class="copyrow">
         <button class="btn btn-sm btn-success copy-btn" onclick="copyText('workshopline', this)">Copy</button>
         <code class="copyline" id="workshopline">WorkshopItems=3390453390;3402491515;2701170568;3171167894;2734705913;2710167561;2392709985;3543229299;3546314080;3669550831;2950902979;3580276809;3403490889;3304582091;3685499657;3281755175;3773834525;3508537032;3437629766;3490188370;3502080466;3536052310;2896041179;3077900375;2503622437;3596827035;3579640010;3706786888;3426448380;3725497089;3330403100;3693258802;2956146279;3670064951;3461263912;3635591071;3779561845;3110911330;3614034284;3005903549;3379334330;2932549988;3041122351;3435796523;3779315249;3766571591;3756938756;3743371090;3650071729;3774776279;3501302358;3739256725;3699451356;3677588446;3773431008;3761900475;3760471726;3776599088;3773440695;3761926791;3774750067</code>
-
+   </div>
+    <div class="copyrow">
         <button class="btn btn-sm btn-success copy-btn" onclick="copyText('mapline2', this)">Copy</button>
         <code class="copyline" id="mapline2">Map=map_distanciado;Muldraugh, KY</code>
+     </div>
       </div>
 
     </div>
