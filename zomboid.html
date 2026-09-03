@@ -1,0 +1,171 @@
+---
+title: Project Zomboid Modlist — davexmachina
+description: "ExMachina Zombieland server setup — full Project Zomboid mod list in load order, with mod IDs, workshop IDs and config lines."
+layout: default
+header:
+  small: true
+  text: "ExMachina Zombieland Server"
+---
+
+<style>
+  .page-header-small { min-height: 0 !important; height: auto !important; }
+  .page-header-image { display: none !important; }
+
+  .zcard {
+    background-color: #172b4d;
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: .5rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .zcard h4 { color: #2dce89; margin-bottom: 1rem; }
+
+  .ztable-wrap { overflow-x: auto; }
+  table.ztable { width: 100%; border-collapse: collapse; font-size: .9rem; }
+  .ztable th {
+    color: #fb6340; text-align: left; padding: .6rem .75rem;
+    border-bottom: 1px solid rgba(255,255,255,.15); white-space: nowrap;
+  }
+  .ztable td { padding: .5rem .75rem; border-bottom: 1px solid rgba(255,255,255,.07); color: #e9ecef; vertical-align: top; }
+  .ztable tr:hover td { background: rgba(45,206,137,.06); }
+  .ztable td.num { color: #8898aa; white-space: nowrap; }
+  .ztable code { background: rgba(255,255,255,.08); color: #f3a4b5; padding: 2px 6px; border-radius: 4px; font-size: .82em; }
+  .ztable a { color: #fff; text-decoration: underline dotted rgba(255,255,255,.4); }
+  .ztable a:hover { color: #2dce89; text-decoration: underline; }
+  .ztable .same { color: #8898aa; font-size: .82em; }
+
+  .copyline {
+    background: #0d1b33; border: 1px solid rgba(255,255,255,.15); border-radius: 6px;
+    color: #adb5bd; padding: .75rem 1rem; font-size: .8rem;
+    white-space: nowrap; overflow-x: auto; display: block; margin: .5rem 0;
+  }
+  .copy-btn { float: right; }
+</style>
+
+<div class="container py-5">
+
+  <div class="row mb-4"><div class="col-12">
+    <a href="/modlists" class="text-white-50" style="text-decoration:none;"><i class="ni ni-bold-left mr-2"></i>All Modlists</a>
+  </div></div>
+
+  <div class="row justify-content-center mb-4">
+    <div class="col-lg-10 text-center">
+      <h1 class="display-3 text-white">Project Zomboid</h1>
+      <p class="lead text-white-50">ExMachina Zombieland — 16 slots · PVP on (safety system) · pauses when empty · B42</p>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+
+      <!-- World / Map -->
+      <div class="zcard">
+        <h4><i class="ni ni-map-big mr-2"></i>World / Map</h4>
+        <p class="text-white mb-2">Custom map folder <code>map_distanciado</code> plus vanilla <code>Muldraugh, KY</code>.</p>
+        <button class="btn btn-sm btn-success copy-btn" onclick="copyText('mapline', this)">Copy</button>
+        <code class="copyline" id="mapline">Map=map_distanciado;Muldraugh, KY</code>
+      </div>
+
+      <!-- Load order table -->
+      <div class="zcard">
+        <h4><i class="ni ni-align-center mr-2"></i>Mod Load Order (top → bottom)</h4>
+        <div class="ztable-wrap">
+        <table class="ztable">
+          <thead><tr><th>#</th><th>Mod</th><th>Mod ID</th><th>Workshop ID</th></tr></thead>
+          <tbody>
+            <tr><td class="num">1</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3390453390" target="_blank">Kitsune Library</a></td><td><code>kitsunelib</code></td><td class="num">3390453390</td></tr>
+            <tr><td class="num">2</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3402491515" target="_blank">Tsar's Library</a></td><td><code>tsarslib</code></td><td class="num">3402491515</td></tr>
+            <tr><td class="num">3</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2701170568" target="_blank">Extra Map Symbols</a></td><td><code>ExtraMapSymbols</code></td><td class="num">2701170568</td></tr>
+            <tr><td class="num">4</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2701170568" target="_blank">Extra Map Symbols UI</a></td><td><code>ExtraMapSymbolsUI</code></td><td class="num">2701170568 <span class="same">(same item)</span></td></tr>
+            <tr><td class="num">5</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3171167894" target="_blank">Damn Lib</a></td><td><code>damnlib</code></td><td class="num">3171167894</td></tr>
+            <tr><td class="num">6</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2734705913" target="_blank">Map Symbol Size Slider</a></td><td><code>MapSymbolSizeSlider</code></td><td class="num">2734705913</td></tr>
+            <tr><td class="num">7</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2710167561" target="_blank">Map Legend UI</a></td><td><code>MapLegendUI</code></td><td class="num">2710167561</td></tr>
+            <tr><td class="num">8</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2392709985" target="_blank">Project RV Interior (42)</a></td><td><code>PROJECTRVInterior42</code></td><td class="num">2392709985</td></tr>
+            <tr><td class="num">9</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3543229299" target="_blank">Waterpipes</a></td><td><code>Waterpipes</code></td><td class="num">3543229299</td></tr>
+            <tr><td class="num">10</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3546314080" target="_blank">Proximity Inventory</a></td><td><code>ProximityInventory</code></td><td class="num">3546314080</td></tr>
+            <tr><td class="num">11</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3669550831" target="_blank">Equipment UI</a></td><td><code>EQUIPMENT_UI</code></td><td class="num">3669550831</td></tr>
+            <tr><td class="num">12</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2950902979" target="_blank">The Only Cure</a></td><td><code>TheOnlyCure</code></td><td class="num">2950902979</td></tr>
+            <tr><td class="num">13</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3580276809" target="_blank">Standardized Vehicle Upgrades 3 (Core)</a></td><td><code>StandardizedVehicleUpgrades3Core</code></td><td class="num">3580276809</td></tr>
+            <tr><td class="num">14</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3580276809" target="_blank">Standardized Vehicle Upgrades 3 (V)</a></td><td><code>StandardizedVehicleUpgrades3V</code></td><td class="num">3580276809 <span class="same">(same item)</span></td></tr>
+            <tr><td class="num">15</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3403490889" target="_blank">VA Sinked</a></td><td><code>VASinked</code></td><td class="num">3403490889</td></tr>
+            <tr><td class="num">16</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3304582091" target="_blank">Vanilla Vehicles Animated</a></td><td><code>VanillaVehiclesAnimated</code></td><td class="num">3304582091</td></tr>
+            <tr><td class="num">17</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3304582091" target="_blank">Vanilla Vehicles Animated (SVU)</a></td><td><code>VanillaVehiclesAnimated_SVU</code></td><td class="num">3304582091 <span class="same">(same item)</span></td></tr>
+            <tr><td class="num">18</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3685499657" target="_blank">Marz Vanilla Guns</a></td><td><code>MarzVanillaGuns</code></td><td class="num">3685499657</td></tr>
+            <tr><td class="num">19</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3281755175" target="_blank">Neat UI Framework</a></td><td><code>NeatUI_Framework</code></td><td class="num">3281755175</td></tr>
+            <tr><td class="num">20</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3773834525" target="_blank">Clean UI</a></td><td><code>CleanUI</code></td><td class="num">3773834525</td></tr>
+            <tr><td class="num">21</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3508537032" target="_blank">Project Cook</a></td><td><code>Project_Cook</code></td><td class="num">3508537032</td></tr>
+            <tr><td class="num">22</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3437629766" target="_blank">Neat Crafting</a></td><td><code>Neat_Crafting</code></td><td class="num">3437629766</td></tr>
+            <tr><td class="num">23</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3490188370" target="_blank">Neat Building (UI only)</a></td><td><code>Neat_Building_UIOnly</code></td><td class="num">3490188370</td></tr>
+            <tr><td class="num">24</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3502080466" target="_blank">Error Magnifier</a></td><td><code>errorMagnifier</code></td><td class="num">3502080466</td></tr>
+            <tr><td class="num">25</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3536052310" target="_blank">Chuckleberry Finn Alert System</a></td><td><code>ChuckleberryFinnAlertSystem</code></td><td class="num">3536052310</td></tr>
+            <tr><td class="num">26</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2896041179" target="_blank">Skill Recovery Journal</a></td><td><code>SkillRecoveryJournal</code></td><td class="num">2896041179</td></tr>
+            <tr><td class="num">27</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3077900375" target="_blank">Shelter Hold: Beehive</a></td><td><code>ShelterHold_Beehive</code></td><td class="num">3077900375</td></tr>
+            <tr><td class="num">28</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2503622437" target="_blank">STA Pry Open</a></td><td><code>STA_PryOpen</code></td><td class="num">2503622437</td></tr>
+            <tr><td class="num">29</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3596827035" target="_blank">BCG Tools</a></td><td><code>BCGToolsTEST</code></td><td class="num">3596827035</td></tr>
+            <tr><td class="num">30</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3579640010" target="_blank">Stank's Suicide</a></td><td><code>stanks_suicide</code></td><td class="num">3579640010</td></tr>
+            <tr><td class="num">31</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3706786888" target="_blank">Computer Mod</a></td><td><code>ComputerModkum</code></td><td class="num">3706786888</td></tr>
+            <tr><td class="num">32</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3426448380" target="_blank">KI5 Trailers</a></td><td><code>KI5trailers</code></td><td class="num">3426448380</td></tr>
+            <tr><td class="num">33</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3725497089" target="_blank">TacHold (Complete)</a></td><td><code>TacHold Complete</code></td><td class="num">3725497089</td></tr>
+            <tr><td class="num">34</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3330403100" target="_blank">Rain Cleans Blood</a></td><td><code>RainCleansBlood</code></td><td class="num">3330403100</td></tr>
+            <tr><td class="num">35</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3693258802" target="_blank">KI5 Campers</a></td><td><code>KI5campers</code></td><td class="num">3693258802</td></tr>
+            <tr><td class="num">36</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2956146279" target="_blank">Clean Hotbar</a></td><td><code>CleanHotBar</code></td><td class="num">2956146279</td></tr>
+            <tr><td class="num">37</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3670064951" target="_blank">Realistic Dash</a></td><td><code>RealisticDash</code></td><td class="num">3670064951</td></tr>
+            <tr><td class="num">38</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3461263912" target="_blank">LG Extended Plumbing</a></td><td><code>LGExtendedPlumbing</code></td><td class="num">3461263912</td></tr>
+            <tr><td class="num">39</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3635591071" target="_blank">'87 Ford B700</a></td><td><code>87fordB700</code></td><td class="num">3635591071</td></tr>
+            <tr><td class="num">40</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3779561845" target="_blank">'85 Chevy Step Van</a></td><td><code>85chevyStepVan</code></td><td class="num">3779561845</td></tr>
+            <tr><td class="num">41</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3110911330" target="_blank">'85 Chevy Step Van (Expanded)</a></td><td><code>85chevyStepVanexpanded</code></td><td class="num">3110911330</td></tr>
+            <tr><td class="num">42</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3614034284" target="_blank">'63 Beetle</a></td><td><code>63beetle</code></td><td class="num">3614034284</td></tr>
+            <tr><td class="num">43</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3005903549" target="_blank">'82 Porsche 911</a></td><td><code>82porsche911</code></td><td class="num">3005903549</td></tr>
+            <tr><td class="num">44</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3379334330" target="_blank">'89 Trooper</a></td><td><code>89trooper</code></td><td class="num">3379334330</td></tr>
+            <tr><td class="num">45</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2932549988" target="_blank">'63 Type 2 Van</a></td><td><code>63Type2Van</code></td><td class="num">2932549988</td></tr>
+            <tr><td class="num">46</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3041122351" target="_blank">'88 Toyota Hilux</a></td><td><code>88toyotaHilux</code></td><td class="num">3041122351</td></tr>
+            <tr><td class="num">47</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3435796523" target="_blank">'87 Toyota Corolla</a></td><td><code>87toyotaCorolla</code></td><td class="num">3435796523</td></tr>
+            <tr><td class="num">48</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3779315249" target="_blank">'70 Chevelle</a></td><td><code>70chevelle</code></td><td class="num">3779315249</td></tr>
+            <tr><td class="num">49</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3766571591" target="_blank">'69 Ford Mustang</a></td><td><code>69fordMustang</code></td><td class="num">3766571591</td></tr>
+            <tr><td class="num">50</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3756938756" target="_blank">'73 Nissan GTR</a></td><td><code>73nissanGTR</code></td><td class="num">3756938756</td></tr>
+            <tr><td class="num">51</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3743371090" target="_blank">True Actions Dancing</a></td><td><code>TrueActionsDancing</code></td><td class="num">3743371090</td></tr>
+            <tr><td class="num">52</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3650071729" target="_blank">Subir Escaleras</a></td><td><code>SubirEscaleras</code></td><td class="num">3650071729</td></tr>
+            <tr><td class="num">53</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3774776279" target="_blank">VVA Cull Seats</a></td><td><code>VVA_cullseats</code></td><td class="num">3774776279</td></tr>
+            <tr><td class="num">54</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3501302358" target="_blank">VSUI KI5</a></td><td><code>VSUIKI5</code></td><td class="num">3501302358</td></tr>
+            <tr><td class="num">55</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3739256725" target="_blank">New Music</a></td><td><code>NewMusic</code></td><td class="num">3739256725</td></tr>
+            <tr><td class="num">56</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3699451356" target="_blank">Trader Vending Machines</a></td><td><code>TraderVendingMachines</code></td><td class="num">3699451356</td></tr>
+            <tr><td class="num">57</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3677588446" target="_blank">Player Dog Tags</a></td><td><code>PlayerDogTags42</code></td><td class="num">3677588446</td></tr>
+            <tr><td class="num">58</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3773431008" target="_blank">New Music — Quincy Jones</a></td><td><code>NewMusic_QuincyJones</code></td><td class="num">3773431008</td></tr>
+            <tr><td class="num">59</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3761900475" target="_blank">New Music — Jimi Hendrix</a></td><td><code>NewMusic_JimiHendrix</code></td><td class="num">3761900475</td></tr>
+            <tr><td class="num">60</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3760471726" target="_blank">New Music — CMM</a></td><td><code>NewMusic_CMM</code></td><td class="num">3760471726</td></tr>
+            <tr><td class="num">61</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3776599088" target="_blank">New Music — Bob Marley</a></td><td><code>NewMusic_BobMarley</code></td><td class="num">3776599088</td></tr>
+            <tr><td class="num">62</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3773440695" target="_blank">New Music — Himiko Kikuchi</a></td><td><code>NewMusic_HimikoKikuchi</code></td><td class="num">3773440695</td></tr>
+            <tr><td class="num">63</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3761926791" target="_blank">New Music — Bela Fleck 1</a></td><td><code>NewMusic_BelaFleck1</code></td><td class="num">3761926791</td></tr>
+            <tr><td class="num">64</td><td><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3774750067" target="_blank">New Music — Life After Death</a></td><td><code>NewMusic_LifeAfterDeath</code></td><td class="num">3774750067</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <!-- Copy-paste config lines -->
+      <div class="zcard">
+        <h4><i class="ni ni-single-copy-04 mr-2"></i>Config lines (copy-paste)</h4>
+
+        <button class="btn btn-sm btn-success copy-btn" onclick="copyText('modsline', this)">Copy</button>
+        <code class="copyline" id="modsline">Mods=kitsunelib;tsarslib;ExtraMapSymbols;ExtraMapSymbolsUI;damnlib;MapSymbolSizeSlider;MapLegendUI;PROJECTRVInterior42;Waterpipes;ProximityInventory;EQUIPMENT_UI;TheOnlyCure;StandardizedVehicleUpgrades3Core;StandardizedVehicleUpgrades3V;VASinked;VanillaVehiclesAnimated;VanillaVehiclesAnimated_SVU;MarzVanillaGuns;NeatUI_Framework;CleanUI;Project_Cook;Neat_Crafting;Neat_Building_UIOnly;errorMagnifier;ChuckleberryFinnAlertSystem;SkillRecoveryJournal;ShelterHold_Beehive;STA_PryOpen;BCGToolsTEST;stanks_suicide;ComputerModkum;KI5trailers;TacHold Complete;RainCleansBlood;KI5campers;CleanHotBar;RealisticDash;LGExtendedPlumbing;87fordB700;85chevyStepVan;85chevyStepVanexpanded;63beetle;82porsche911;89trooper;63Type2Van;88toyotaHilux;87toyotaCorolla;70chevelle;69fordMustang;73nissanGTR;TrueActionsDancing;SubirEscaleras;VVA_cullseats;VSUIKI5;NewMusic;TraderVendingMachines;PlayerDogTags42;NewMusic_QuincyJones;NewMusic_JimiHendrix;NewMusic_CMM;NewMusic_BobMarley;NewMusic_HimikoKikuchi;NewMusic_BelaFleck1;NewMusic_LifeAfterDeath</code>
+
+        <button class="btn btn-sm btn-success copy-btn" onclick="copyText('workshopline', this)">Copy</button>
+        <code class="copyline" id="workshopline">WorkshopItems=3390453390;3402491515;2701170568;3171167894;2734705913;2710167561;2392709985;3543229299;3546314080;3669550831;2950902979;3580276809;3403490889;3304582091;3685499657;3281755175;3773834525;3508537032;3437629766;3490188370;3502080466;3536052310;2896041179;3077900375;2503622437;3596827035;3579640010;3706786888;3426448380;3725497089;3330403100;3693258802;2956146279;3670064951;3461263912;3635591071;3779561845;3110911330;3614034284;3005903549;3379334330;2932549988;3041122351;3435796523;3779315249;3766571591;3756938756;3743371090;3650071729;3774776279;3501302358;3739256725;3699451356;3677588446;3773431008;3761900475;3760471726;3776599088;3773440695;3761926791;3774750067</code>
+
+        <button class="btn btn-sm btn-success copy-btn" onclick="copyText('mapline2', this)">Copy</button>
+        <code class="copyline" id="mapline2">Map=map_distanciado;Muldraugh, KY</code>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+function copyText(id, btn) {
+  var t = document.getElementById(id).textContent.trim();
+  navigator.clipboard.writeText(t).then(function () {
+    var old = btn.textContent; btn.textContent = "Copied!";
+    setTimeout(function () { btn.textContent = old; }, 1500);
+  });
+}
+</script>
