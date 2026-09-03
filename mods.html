@@ -10,64 +10,61 @@ header:
 <style>
   .page-header-small { min-height: 0 !important; height: auto !important; }
   .page-header-image { display: none !important; }
-  .modlist-card {
-    background-color:#172b4d;
-    border:1px solid rgba(255,255,255,.1) !important;
-    transition: transform .2s, border-color .2s, box-shadow .2s;
-    text-decoration: none !important;
+
+  .modlist-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #172b4d;
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: .5rem;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: .75rem;
+    color: #fff;
+    text-decoration: none;
+    transition: border-color .2s, transform .2s;
   }
-  .modlist-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(45,206,137,.5) !important;
-    box-shadow: 0 .75rem 2rem rgba(0,0,0,.35) !important;
+  .modlist-row:hover {
+    border-color: rgba(45,206,137,.5);
+    transform: translateX(6px);
+    color: #fff;
+    text-decoration: none;
   }
+  .modlist-row .title { font-size: 1.15rem; font-weight: 600; }
+  .modlist-row .desc  { color: #adb5bd; font-size: .9rem; margin: 0; }
+  .modlist-row .arrow { color: #2dce89; font-size: 1.2rem; margin-left: 1rem; }
+  .modlist-row.soon   { opacity: .55; pointer-events: none; }
 </style>
 
-<div class="section features-3 my-5 fullWidth" style="background-image: url('../assets/img/theme/davexmpatterns.svg')">
-  <div class="container">
+<div class="container py-5">
 
-    <div class="row text-center justify-content-center mb-5">
-      <div class="col-lg-8">
-        <h3 class="display-3 text-white">Modlists</h3>
-        <p class="lead text-white">Every modded setup I run — with links, install notes and load orders.</p>
-      </div>
+  <div class="row justify-content-center mb-4">
+    <div class="col-lg-8 text-center">
+      <h1 class="display-3 text-white">Modlists</h1>
+      <p class="lead text-white-50">Every modded setup I run — with links, install notes and load orders.</p>
     </div>
+  </div>
 
-    <div class="row justify-content-center">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
 
-      <!-- S.T.A.L.K.E.R. GAMMA (live) -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <a href="/gamma" class="card modlist-card border-0 shadow h-100">
-          <div class="card-body p-4">
-            <h4 class="text-warning mb-2"><i class="ni ni-align-center mr-2"></i>S.T.A.L.K.E.R. GAMMA</h4>
-            <p class="text-white mb-3">40 custom additions over base GAMMA — graphics, audio, gameplay, weapons — with download links and the exact MO2 load order.</p>
-            <span class="btn btn-sm btn-success">View Modlist</span>
-          </div>
-        </a>
-      </div>
-
-      <!-- Project Zomboid (coming soon) -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card modlist-card border-0 shadow h-100" style="opacity:.75;">
-          <div class="card-body p-4">
-            <h4 class="text-warning mb-2"><i class="ni ni-controller mr-2"></i>Project Zomboid</h4>
-            <p class="text-white mb-3">My Zomboid setup — mods, sandbox settings and compatibility notes.</p>
-            <span class="btn btn-sm btn-secondary">Coming Soon</span>
-          </div>
+      <a href="/gamma-mods" class="modlist-row">
+        <div>
+          <div class="title"><i class="ni ni-align-center text-success mr-2"></i>S.T.A.L.K.E.R. GAMMA</div>
+          <p class="desc">40 custom additions over base GAMMA — links, notes and the exact MO2 load order.</p>
         </div>
-      </div>
+        <i class="ni ni-curved-next arrow"></i>
+      </a>
 
-      <!-- Future slot -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card modlist-card border-0 shadow h-100" style="opacity:.5;">
-          <div class="card-body p-4">
-            <h4 class="text-warning mb-2"><i class="ni ni-fat-add mr-2"></i>More Coming Later</h4>
-            <p class="text-white mb-3">Other modded games will appear here as I build their setups.</p>
-            <span class="btn btn-sm btn-secondary">Planned</span>
-          </div>
+      <div class="modlist-row soon">
+        <div>
+          <div class="title"><i class="ni ni-controller text-success mr-2"></i>Project Zomboid</div>
+          <p class="desc">Coming soon.</p>
         </div>
+        <i class="ni ni-curved-next arrow"></i>
       </div>
 
     </div>
   </div>
+
 </div>
